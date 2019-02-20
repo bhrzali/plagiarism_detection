@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+#source, #text{
+  height:300px;
+}
+.submit-btn{
+  float:left;
+}
+.card{
+  border-radius: 10px;
+}
+</style>
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+          <div class="card rounded">
+            <img class="card-img-top" src="../static/imgs/banner.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Upload your paper</h5>
+              <form action = "/uploader" method = "POST" enctype = "multipart/form-data">
+                <input type = "file" name = "file" />
+                <input id="submit-btn" type = "submit">
+                <!--a type="submit" class="btn btn-primary">Upload</a-->
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+#source, #text{
+  height:300px;
+}
+.container-fluid{
+  margin-left:0px;
+  margin-right:0px;
+}
+.card{
+  width:100%
+}
+label{
+  margin-top: 10px;
+}
+textarea{
+  direction: RTL;
+}
+</style>
+<!--section id="about"-->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <form action="/check" class="form-group flex-box">
+        <div class="row">
+            <label for="usr">Source:</label>
+            <textarea type="text" class="form-control" id="source" name="source">{{ source }}</textarea>
+            <br>
+            <label for="usr">Text:</label>
+            <textarea type="text" class="form-control" id="text" name="text">{{ text }}</textarea>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+<!--/section-->
+{% endblock %}

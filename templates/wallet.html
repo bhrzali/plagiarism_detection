@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+.card{
+    margin:20px;
+    width:250px;
+}
+img{
+    width:250px;
+    height:300px;
+}
+</style>
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <p>Total Balance: {{ my_balance }}</p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="card">
+            <img src="../static/imgs/billgates.jpeg">
+            <input type="button" value="Vote">
+        </div>
+        <div class="card">
+            <img src="../static/imgs/jordan.jpeg">
+            <input type="button" value="Vote">
+        </div>
+        <div class="card">
+            <img src="../static/imgs/shane.jpg">
+            <input type="button" value="Vote">
+        </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
